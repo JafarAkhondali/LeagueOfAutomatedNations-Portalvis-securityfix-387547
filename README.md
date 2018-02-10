@@ -7,3 +7,6 @@ The goal of making this tool was to aleviate the tedium of gathering information
 Another goal of making this tool was to learn more about web development and some of the moving parts that make it up. A lot of the parts of this project are things that I had never done before so do not expect everything to be done in the best way possible.
 
 It uses a [node](https://nodejs.org) server to handle the serving of files as well as the updating of the data and uses a javascript visualization library called [D3](https://d3js.org/) to handle the visualizations.
+
+## Thank you
+Special thanks to tedivm and esryok for their assistance in the creation of this tool.
