@@ -1,6 +1,4 @@
-/**
- * Created by Jake on 10/2/17.
- */
+
 module.exports = class RoomNameUtils {
     static parseRoomName(roomName) {
         return roomName.match(/^(E|W)([0-9]+)(N|S)([0-9]+)$/);

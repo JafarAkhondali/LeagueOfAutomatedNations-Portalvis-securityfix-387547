@@ -1,7 +1,3 @@
-/**
- * Created by Jake on 10/2/17.
- */
-
 class PortalDataManager {
     constructor(fileString) {
         this.raw = fileString;

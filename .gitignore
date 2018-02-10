@@ -1,2 +1,6 @@
 .DS_Store
 
+/public/js/data.js
+alliances.js
+/shard*
+
