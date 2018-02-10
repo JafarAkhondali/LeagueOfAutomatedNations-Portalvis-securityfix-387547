@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal Vis</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 10px;
+            padding: 0;
+            background-color: #555555;
+        }
+
+        #portalInfo, #destinationInfo {
+            font-family: verdana, sans-serif;
+        }
+
+        #title {
+            color:#FBFFFE;
+            font-size: 2em;
+            font-family: verdana, sans-serif;
+        }
+        #subtitle, #updated, .info {
+            color:#7F7F7F;
+            font-family: verdana, sans-serif;
+        }
+        #filters {
+            color:#A5A5A5;
+            font-family: verdana, sans-serif;
+        }
+        br {
+            margin:0;
+        }
+
+    </style>
+
+    <script src="https://d3js.org/d3.v4.js"></script>
+</head>
+<body>
+<h1 id="title">Portalvis</h1>
+<p class="info">Shard: <select id="shard_selection"></select></p>
+<p id="subtitle">Created by Helam using data provided by The Culture.</p>
+<div id="updated"></div>
+<div class="info">Filters are not case sensitive and support basic boolean logic (parenthesis, &&, and || are supported).</div>
+<div class="info"> Portals that are currently <font color="cyan">decaying</font> show with a <font color="cyan">cyan</font> border and portals in an <font color="yellow">unknown state</font> show with a <font color="yellow">yellow</font> border.</div>
+
+<br/>
+
+<div id="filters">
+    <font color="#FAA916">Origin Filter:</font>
+    Alliance Name:
+    <input id="allianceFilter1" type="text" placeholder="Alliance Name"/>  
+    Player Name:
+    <input id="playerFilter1" type="text" placeholder="Player Name" />
+    <br/>
+    <font color="#228B22">Destination Filter:</font>
+    Alliance Name:
+    <input id="allianceFilter2" type="text" placeholder="Alliance Name"/>  
+    Player Name:
+    <input id="playerFilter2" type="text" placeholder="Player Name" />  
+    <input id="filterButton" type="button" value="Filter"/>  
+    <input id="clearFilterButton" type="button" value="Clear"/><br/>
+    Portals that match both filters will be <font color="#8A2BE2">this</font> color.
+</div>
+
+<svg height="1000" width="1000" id="mapsvg" style="float:left;margin-right:5px">
+    <image id="mapimg" height="1000" width="1000" xlink:href="screeps_terrain.png" preserveAspectRatio/>
+</svg>
+<div style="min-height:200px">
+<p id="portalInfo">
+Click on a portal to see more information.
+</p>    
+</div>
+
+<div style="min-height:200px">
+<p id="destinationInfo">
+    
+</p>
+</div>
+
+<script src="js/shards.js"></script>
+<script src="js/data.js"></script>
+<script src="js/PortalRoom.js"></script>
+<script src="js/PortalFilter.js"></script>
+<script src="js/portal.js"></script>
+<script src="js/PortalSector.js"></script>
+<script src="js/dataTools.js"></script>
+<script src="js/constants.js"></script>
+<script src="js/portal_overlay.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,2 @@
+let NUM_SECTORS = 20;
+let MAP_WIDTH_ROOMS = NUM_SECTORS * 10 + 2;
