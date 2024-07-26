@@ -12,6 +12,11 @@ var log = function(entry) {
 };
 
 var server = http.createServer(function (req, res) {
+    if (path.normalize(decodeURI(req.url)) !== decodeURI(req.url)) {
+        res.statusCode = 403;
+        res.end();
+        return;
+    }
     if (req.method === 'POST') {
         var body = '';
 
